@@ -2,7 +2,7 @@ import 'dart:math';
 import 'dart:core';
 
 class Tile{
-		num _x;
+    num _x;
     num _y;
     bool _isComet;
     bool _isWormhole;
@@ -55,7 +55,7 @@ class Tile{
 }
 
 class Dice{
-	Random random;
+  Random random;
   
   Dice(){
   	random = new Random();
@@ -68,8 +68,7 @@ class Dice{
 
 abstract class  Obstacle{
   var image;
-  
-	void setObstacle(Tile tile);
+  void setObstacle(Tile tile);
   void movePlayer(Player player);
   
 }
@@ -104,7 +103,7 @@ class Comet extends Obstacle{
 }
 
 class Player{
-		var image;
+    var image;
     num _positionX;
     num _positionY;
 
@@ -196,8 +195,8 @@ class Board{
                 this._tiles.add(new Tile(i, j));
             }
         }
-    	  this._typeOfObstacles = new Set();
-		    this._typeOfObstacles.addAll([new Wormhole(), new Comet()]);
+    	this._typeOfObstacles = new Set();
+	this._typeOfObstacles.addAll([new Wormhole(), new Comet()]);
         this._obstacleRandomizer = new Random();
         int j=-1;
         for (int i = 0; i < this._NUM_OF_OBSTACLE; i++) {
@@ -236,7 +235,7 @@ class Board{
             }
           	print("Player"+(i+1).toString());
           	print(now.getStat());
-            printBoard();
+            	printBoard();
         }
     }
     
@@ -244,9 +243,9 @@ class Board{
       StringBuffer sb = new StringBuffer();
       int counter=0;
         for(int i=0;i<this._tiles.length;i++){
-              	sb.write(this._tiles.elementAt(i).toString());
-          			counter++;
-          			if(counter%10==0) sb.writeln();
+          sb.write(this._tiles.elementAt(i).toString());
+          counter++;
+          if(counter%10==0) sb.writeln();
             }
       print(sb);
       print("\n");
