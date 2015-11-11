@@ -1,3 +1,6 @@
+import 'dart:math';
+import 'dart:core';
+
 class Dice{
 	Random random;
   
