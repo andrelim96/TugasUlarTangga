@@ -1,53 +1,54 @@
+import 'dart:math';
+import 'dart:core';
+
 class Tile{
-		private int x;
-    private int y;
-    private boolean isComet;
-    private boolean isWormhole;
+		num _x;
+    num _y;
+    bool _isComet;
+    bool _isWormhole;
 
-    public Tile(int x, int y) {
-        this.x = x;
-        this.y = y;
-        this.isComet = false;
-        this.isWormhole = false;
+    Tile(num x, num y) {
+        this._x = x;
+        this._y = y;
+        this._isComet = false;
+        this._isWormhole = false;
     }
 
-    public int getX() {
-        return this.x;
+    num getX() {
+        return this._x;
     }
 
-
-    public int getY() {
-        return this.y;
+    num getY() {
+        return this._y;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    void setX(int x) {
+        this._x = x;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    void setY(int y) {
+        this._y = y;
     }
 
-    public boolean isComet() {
-        return this.isComet;
+    bool isComet() {
+        return this._isComet;
     }
 
-    public boolean isWormhole() {
-        return this.isWormhole;
+    bool isWormhole() {
+        return this._isWormhole;
     }
 
-    public void setAsWormhole() {
-        this.isWormhole = true;
+    void setAsWormhole() {
+        this._isWormhole = true;
     }
 
-    public void setAsComet() {
-        this.isComet = true;
+    void setAsComet() {
+        this._isComet = true;
     }
 
-    public String toString()
-    {
-        if(isComet) return " * ";
-        else if(isWormhole) return " O ";
+    String toString(){
+        if(_isComet) return " * ";
+        else if(_isWormhole) return " O ";
         else return " . ";
     }
 
