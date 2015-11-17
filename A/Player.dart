@@ -1,74 +1,47 @@
 import 'dart:math';
 import 'dart:core';
+import 'dart:html';
 
+	/// Kelas yang merepresentasikan pemain dalam permainan ular tangga.
 class Player{
-		var image;
-    num _positionX;
-    num _positionY;
+		/// Atribut yang menyimpan gambar pemain.
+    var image;
+	
+		/// Atribut yang menyimpan posisi pemain dalam papan permainan.
+    num _position;
 
-    Player(num positionX, num positionY) {
-        this._positionX = positionX;
-        this._positionY = positionY;
+		/// Constructor kelas [Player] dengan parameter [_position].
+    Player(num position) {
+        this._position = position;
     }
 
+		/// Method untuk memindahkan posisi [Player] sebanyak parameter steps. 
     void move(int steps) {
-        num yAwal = this._positionY;
+        num posAwal = this._position;
         num stepAwal = steps;
-        //print("Awal "+yAwal.toString()+" "+steps.toString()+" "+stepAwal.toString());
-      	//print("Dibuletin "+(stepAwal/10).floor().toString());
-        for(num i=0;i<(stepAwal/10).floor();i++){
-        	this._positionX+=1;
-        	steps-=10;
-          //print("x sekarang "+_positionX.toString());
-        }
-      	//print("sisa step "+steps.toString());
-        if (9 - _positionY >= steps) {
-            this._positionY = this._positionY + steps;
-        } else {
-            steps = steps - (9 - this._positionY);
-            this._positionX = this._positionX + 1;
-            this._positionY = steps-1;
-        }
-        if(this._positionX>9){
-            this._positionX=9;
-            steps = stepAwal - (9 - yAwal);
-            this._positionY=9;
+        this._position+=steps;
+        if(this._position>99){
+            this._position=99;
+            steps = stepAwal - (99 - posAwal);
             moveBackward(steps);
         }
     }
 
-    num getPositionX() {
-        return this._positionX;
+		/// Mengembalikan nilai atribut [_position].
+    num getPosition() {
+        return this._position;
     }
 
-    num getPositionY() {
-        return this._positionY;
+		///Mengeset nilai atribut [_position].
+    void setPosition(int x) {
+        this._position = x;
     }
 
-    void setPosition(int x, int y) {
-        this._positionX = x;
-        this._positionY = y;
-    }
-
+		/// Method yang memindahkan posisi [Player] jika sudah melewati papan permainan.
     void moveBackward(int steps) {
-    		int yAwal = this._positionY;
-        int stepAwal = steps;
-    		for(int i=0;i<(stepAwal/10).floor();i++)
-        {
-        	this._positionX-=1;
-        	steps-=10;
-        }
-        if (this._positionY - steps >= 0) {
-            this._positionY = this._positionY - steps;
-        } else {
-            steps = steps - this._positionY;
-            this._positionX = this._positionX - 1;
-            this._positionY = 9 - steps +1;
-        }
-    }
-  	String getStat()
-    {
-      return this._positionX.toString()+" "+this._positionY.toString();
-    }
-	
+    		this._position-=steps;
+        if(this._position<0){
+            this._position=0;
+		}
+	}
 }
