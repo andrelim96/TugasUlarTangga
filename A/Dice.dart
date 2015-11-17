@@ -9,7 +9,7 @@ class Dice{
   }
   
   num randomizer(){
-  	return random.nextInt(12)+1;
+  	return random.nextInt(6)+1;
   }
 }
 
