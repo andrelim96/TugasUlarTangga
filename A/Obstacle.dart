@@ -1,10 +1,15 @@
 import 'dart:math';
 import 'dart:core';
+import 'dart:html';
 
+	/// Kelas abstrak untuk merepresentasikan halangan yang ada dalam permainan ular tangga.
 abstract class  Obstacle{
-  var image;
-  
+		/// Atribut yang menyimpan gambar halangan.
+	var image;
+	
+		/// Method untuk mengeset [Tile] menjadi halangan.
 	void setObstacle(Tile tile);
-  void movePlayer(Player player);
-  
+	
+		/// Method untuk memindahkan [Player] yang terkena halangan.
+	void movePlayer(Player player);
 }
