@@ -1,15 +1,25 @@
-import 'dart:math';
-import 'dart:core';
-import 'dart:html';
+abstract class  Obstacle extends Tile{
+  int _in;
+  int _out;
+  Random random = new Random();
+  
+  int getOutIndex()
+  {
+    return this._out;
+  }
+  
+   int getInIndex()
+  {
+    return this._in;
+  }
+  void setOutIndex(int x)
+  {
+    this._out=x;
+  }
+  
+   void setInIndex(int x)
+  {
+    this._in = x;
+  }
 
-	/// Kelas abstrak untuk merepresentasikan halangan yang ada dalam permainan ular tangga.
-abstract class  Obstacle{
-		/// Atribut yang menyimpan gambar halangan.
-	var image;
-	
-		/// Method untuk mengeset [Tile] menjadi halangan.
-	void setObstacle(Tile tile);
-	
-		/// Method untuk memindahkan [Player] yang terkena halangan.
-	void movePlayer(Player player);
 }
