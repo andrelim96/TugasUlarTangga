@@ -233,7 +233,7 @@
 
 <div id="dice" >
     <img src="dice.gif" width="120" height="90" id="img"><h5 id="h5" align ="center">Dice Showing Number</h5></font>
-    <button id="Roll" onclick="myFunction()">ROLL!</button>
+    <button id="Roll">ROLL!</button>
     <div class="player1" id="player1">
         <h2>ME</h2>
     </div>
@@ -242,30 +242,6 @@
     </div>
 </div>
 
-<script>
-    function myFunction() {
-        var x = Math.floor((Math.random() * 6) + 1);
-        if(x == 1){
-            document.getElementById("img").src='1.png';
-        }
-        else if(x == 2){
-            document.getElementById("img").src='2.png';
-        }
-        else if(x == 3){
-            document.getElementById("img").src='3.png';
-        }
-        else if(x == 4){
-            document.getElementById("img").src='4.png';
-        }
-        else if(x == 5){
-            document.getElementById("img").src='5.png';
-        }
-        else{
-            document.getElementById("img").src='6.png';
-        }
-    }
-
-</script>
 
 </body>
 
