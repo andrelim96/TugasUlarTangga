@@ -14,10 +14,11 @@ class Board{
   /// Atribut yang menyimpan giliran [Player]
   int _giliranPemain=-1;
   ///Atribut yang menyimpan nilai boolean apakah board memiliki player computer
-  bool _playingWithComp = true;
+  bool _playingWithComp;
 
   /// Constructor kelas [Board] dengan parameter banyaknya pemain.
-  Board(int numOfPlayers) {
+   Board(int numOfPlayers, bool withComp) {
+    this._playingWithComp = withComp;
     this._players = new List<Player>();
     for (int i = 0; i < numOfPlayers; i++) {
       this._players.add(new Player(0));
@@ -285,7 +286,7 @@ class Board{
 }
 	/// Method untuk menjalankan permainan.
 void main(){
-  	Board board = new Board(2);
+  	Board board = new Board(2,false);
     InputElement roll = querySelector('#Roll');
     roll.onClick.listen((event) => board.play());
 }
