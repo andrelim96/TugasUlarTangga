@@ -1,7 +1,3 @@
-import 'dart:math';
-import 'dart:core';
-import 'dart:html';
-
 /// Kelas yang merepresentasikan papan permainan ular tangga.
 class Board{
 
@@ -17,6 +13,8 @@ class Board{
   final num _NUM_OF_OBSTACLE = 5;
   /// Atribut yang menyimpan giliran [Player]
   int _giliranPemain=-1;
+  ///Atribut yang menyimpan nilai boolean apakah board memiliki player computer
+  bool _playingWithComp = true;
 
   /// Constructor kelas [Board] dengan parameter banyaknya pemain.
   Board(int numOfPlayers) {
@@ -85,17 +83,17 @@ class Board{
 
   /// Method yang mengembalikan nilai untuk menentukan pemain, 0 untuk Player1 dan 1 untuk Player2.
 	int getGiliranPemain(){
-		this.giliranPemain = this.giliranPemain+1;
-		if (giliranPemain == _players.length) {
-			giliranPemain = 0;
+		this._giliranPemain = this._giliranPemain+1;
+		if (_giliranPemain == _players.length) {
+			_giliranPemain = 0;
 		}
-		return this.giliranPemain
+		return this._giliranPemain;
 	}
 
   /// Method yang merepresentasikan jalannya permainan ular tangga.
   void play() {
 
-    int i = this.getI();
+    int i = this.getGiliranPemain();
     //print(i.toString());
     Player now = _players.elementAt(i);
     Player next = null;
@@ -178,14 +176,18 @@ class Board{
       querySelector('#Roll').style.cssText = 'display:none';
     }
     if(this._playingWithComp){
-			this.playWithComp();
+			sleep();
 		}
   }
-	
+
+  ///Method untuk memberi jeda antara giliran jalan player dan giliran jalan computer	
+  Future sleep() {
+  return new Future.delayed(const Duration(seconds: 5), () => playWithComp());
+}
   /// Method yang merepresentasikan giliran main player komputer.
   void playWithComp() {
 
-    int i = this.getI();
+    int i = this.getGiliranPemain();
     //print(i.toString());
     Player now = _players.elementAt(i);
     Player next = null;
@@ -284,6 +286,6 @@ class Board{
 	/// Method untuk menjalankan permainan.
 void main(){
   	Board board = new Board(2);
-    InputElement roll = querySelector('#Rolll');
+    InputElement roll = querySelector('#Roll');
     roll.onClick.listen((event) => board.play());
 }
