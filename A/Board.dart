@@ -58,8 +58,8 @@ class Board{
            _tiles.elementAt(temp.getOutIndex()).setWormholeEnd();
         print((x+1).toString());
         print((temp.getOutIndex()+1).toString());
-        querySelector('#b'+(x+1).toString()).style.backgroundImage = "url('http://in5d.com/images/Wormhole-rgegf.jpg')";
-        querySelector('#b'+(temp.getOutIndex()+1).toString()).style.backgroundImage = "url('http://in5d.com/images/Wormhole-rgegf.jpg')";
+        querySelector('#b'+(x+1).toString()).style.backgroundImage = "url('http://i.imgur.com/eSaaclS.gif')";
+        querySelector('#b'+(temp.getOutIndex()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/YGWtlBR.gif')";
       }
       else if(obstacle ==1)
       {
@@ -77,8 +77,8 @@ class Board{
         _tiles.elementAt(temp.getOutIndex()).setCometEnd();
         print((x+1).toString());
         print((temp.getOutIndex()+1).toString());
-        querySelector('#b'+(x+1).toString()).style.backgroundImage = "url('http://www.haber61.net/d/news/74818.jpg')";
-        querySelector('#b'+(temp.getOutIndex()+1).toString()).style.backgroundImage = "url('http://www.haber61.net/d/news/74818.jpg')";
+        querySelector('#b'+(x+1).toString()).style.backgroundImage = "url('http://i.imgur.com/jo90VY4.gif')";
+         querySelector('#b'+(temp.getOutIndex()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/RIBOFxo.gif')";
       }
       
     }
@@ -115,35 +115,42 @@ class Board{
     }
     int steps = this._dice.randomizer();
     if(steps == 1){
-			querySelector('#img').style.background = "src =  url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Dice-1-b.svg/557px-Dice-1-b.svg.png')";
+			querySelector('#img').style.background = "src =  url('http://i.imgur.com/yVeTbl7.png')";
 		}
 		else if(steps == 2){
-		querySelector('#img').style.background = "url('http://i363.photobucket.com/albums/oo79/fizzgig2k4/dice%20face%20images/lego2dice-1-2.jpg')";
+		querySelector('#img').style.background = "http://i.imgur.com/wb4raPk.png')";
 		}
 		else if(steps == 3){
-		querySelector('#img').style.background = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Dice-3-b.svg/1000px-Dice-3-b.svg.png')";
+		querySelector('#img').style.background = "url('http://i.imgur.com/w6UtvOd.png')";
 		}
 		else if(steps == 4){
-		querySelector('#img').style.background = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Dice-4-b.svg/1024px-Dice-4-b.svg.png')";
+		querySelector('#img').style.background = "url('http://i.imgur.com/yXSX8o2.png')";
 		}
 		else if(steps == 5){
-		querySelector('#img').style.background = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Dice-5-b.svg/1024px-Dice-5-b.svg.png')";
+		querySelector('#img').style.background = "url('http://i.imgur.com/Q1mIluA.png')";
 		}
 		else if (steps == 6){
-		querySelector('#img').style.background = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Dice-6-b.svg/557px-Dice-6-b.svg.png')";
+		querySelector('#img').style.background = "url('http://i.imgur.com/EgRIZwJ.png')";
 		}
     print(steps.toString());
     //print('#b'+(now.getPosition()+1).toString()); 
-    if(next.getPosition()!=now.getPosition()&&now.getPosition()!=99)
+   if(next.getPosition()!=now.getPosition()&&now.getPosition()!=99)
     {
-        if(_tiles.elementAt(now.getPosition()) is Comet || _tiles.elementAt(now.getPosition()).isCometEnd() )
+        if(_tiles.elementAt(now.getPosition()) is Comet)
         {
-          querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://www.haber61.net/d/news/74818.jpg')";
+          querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/jo90VY4.gif')";
         }
-      else if(_tiles.elementAt(now.getPosition()) is Wormhole || _tiles.elementAt(now.getPosition()).isWormholeEnd() )
+       if(_tiles.elementAt(now.getPosition()).isCometEnd() )
         {
-         querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://in5d.com/images/Wormhole-rgegf.jpg')";
-          
+          querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/RIBOFxo.gif')";
+        }
+       if(_tiles.elementAt(now.getPosition()) is Wormhole)
+        {
+          querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/eSaaclS.gif')";
+        }
+       if(_tiles.elementAt(now.getPosition()).isWormholeEnd() )
+        {
+          querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/YGWtlBR.gif')";
         }
       else
       {
@@ -168,11 +175,11 @@ class Board{
     //print('#b'+x.toString());
     if(i==0)
     {
-      querySelector('#b'+x.toString()).style.backgroundImage = "url('https://cdn.vectorstock.com/i/composite/15,16/cartoon-astronaut-standing-pointing-vector-1631516.jpg')";
+      querySelector('#b'+x.toString()).style.backgroundImage = "url('http://i.imgur.com/Y3r30hN.png')";
     }
     else if(i==1)
     {
-      querySelector('#b'+x.toString()).style.backgroundImage = "url('http://thumbs.dreamstime.com/z/astronaut-moon-cartoon-planting-united-states-flag-eps-file-available-you-can-find-other-illustrations-featuring-30989190.jpg')";
+      querySelector('#b'+x.toString()).style.backgroundImage = "url('http://i.imgur.com/b8o7YWP.png')";
       
     }
     //print(now.getPosition());
@@ -209,35 +216,42 @@ class Board{
     }
     int steps = this._dice.randomizer();
     if(steps == 1){
-			querySelector('#img').style.background = "src =  url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Dice-1-b.svg/557px-Dice-1-b.svg.png')";
+			querySelector('#img').style.background = "src =  url('http://i.imgur.com/yVeTbl7.png')";
 		}
 		else if(steps == 2){
-		querySelector('#img').style.background = "url('http://i363.photobucket.com/albums/oo79/fizzgig2k4/dice%20face%20images/lego2dice-1-2.jpg')";
+		querySelector('#img').style.background = "url('http://i.imgur.com/wb4raPk.png')";
 		}
 		else if(steps == 3){
-		querySelector('#img').style.background = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Dice-3-b.svg/1000px-Dice-3-b.svg.png')";
+		querySelector('#img').style.background = "url('http://i.imgur.com/w6UtvOd.png')";
 		}
 		else if(steps == 4){
-		querySelector('#img').style.background = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Dice-4-b.svg/1024px-Dice-4-b.svg.png')";
+		querySelector('#img').style.background = "url('http://i.imgur.com/yXSX8o2.png')";
 		}
 		else if(steps == 5){
-		querySelector('#img').style.background = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Dice-5-b.svg/1024px-Dice-5-b.svg.png')";
+		querySelector('#img').style.background = "url('http://i.imgur.com/Q1mIluA.png')";
 		}
 		else if (steps == 6){
-		querySelector('#img').style.background = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Dice-6-b.svg/557px-Dice-6-b.svg.png')";
+		querySelector('#img').style.background = "url(' http://i.imgur.com/EgRIZwJ.png')";
 		}
     print(steps.toString());
     //print('#b'+(now.getPosition()+1).toString()); 
     if(next.getPosition()!=now.getPosition()&&now.getPosition()!=99)
     {
-        if(_tiles.elementAt(now.getPosition()) is Comet || _tiles.elementAt(now.getPosition()).isCometEnd() )
+        if(_tiles.elementAt(now.getPosition()) is Comet)
         {
-          querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://www.haber61.net/d/news/74818.jpg')";
+          querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/jo90VY4.gif')";
         }
-      else if(_tiles.elementAt(now.getPosition()) is Wormhole || _tiles.elementAt(now.getPosition()).isWormholeEnd() )
+       if(_tiles.elementAt(now.getPosition()).isCometEnd() )
         {
-         querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://in5d.com/images/Wormhole-rgegf.jpg')";
-          
+          querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/RIBOFxo.gif')";
+        }
+       if(_tiles.elementAt(now.getPosition()) is Wormhole)
+        {
+          querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/eSaaclS.gif')";
+        }
+       if(_tiles.elementAt(now.getPosition()).isWormholeEnd() )
+        {
+          querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/YGWtlBR.gif')";
         }
       else
       {
@@ -262,11 +276,11 @@ class Board{
     //print('#b'+x.toString());
     if(i==0)
     {
-      querySelector('#b'+x.toString()).style.backgroundImage = "url('https://cdn.vectorstock.com/i/composite/15,16/cartoon-astronaut-standing-pointing-vector-1631516.jpg')";
+      querySelector('#b'+x.toString()).style.backgroundImage = "url('http://i.imgur.com/Y3r30hN.png')";
     }
     else if(i==1)
     {
-      querySelector('#b'+x.toString()).style.backgroundImage = "url('http://thumbs.dreamstime.com/z/astronaut-moon-cartoon-planting-united-states-flag-eps-file-available-you-can-find-other-illustrations-featuring-30989190.jpg')";
+      querySelector('#b'+x.toString()).style.backgroundImage = "url('http://i.imgur.com/b8o7YWP.png')";
       
     }
     //print(now.getPosition());
@@ -290,7 +304,7 @@ class Board{
     print(sb);
     print("\n");
   }
-}
+ }
 	/// Method untuk menjalankan permainan.
 void main(){
   Board board = null;
