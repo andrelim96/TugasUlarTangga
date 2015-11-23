@@ -1,3 +1,8 @@
+import 'dart:math';
+import 'dart:core';
+import 'dart:html';
+import 'dart:async';
+
 /// Kelas yang merepresentasikan papan permainan ular tangga.
 class Board{
 
