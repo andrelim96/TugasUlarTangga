@@ -1,3 +1,7 @@
+import 'dart:math';
+import 'dart:core';
+import 'dart:html';
+
 ///Kelas abstrak yang merepresentasikan rintangan dalam papan permainan ular tangga.
 abstract class  Obstacle extends Tile{
   ///atribut yang menyimpan index letak awal rintangan dalam papan permainan.
