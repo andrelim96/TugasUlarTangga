@@ -1,5 +1,4 @@
 
-
 <html>
 <head>
 
@@ -22,23 +21,18 @@
         top: 15px;
         background : url("http://i.imgur.com/KTISV8h.jpg");
         background-position : center;
-
     }
-
-
     #dice{
-        background : url("http://cdn.phys.org/newman/gfx/news/hires/2014/whyisspacebl.jpg");
+        background : url("http://i.imgur.com/KLL0Y6B.jpg");
         background-position : center;
-        width: 710px;
+        width: 732px;
         height: 150px;
         outline: 2px thick black;
         outline-style: double;
         position: absolute;
         left: 550px;
         top: 740px
-
     }
-
     #img{
         width: 75px;
         height: 75px;
@@ -46,41 +40,48 @@
         top: 45px;
         position: absolute;
     }
-
     #Roll{
-
         left: 330px;
         top: 127px;
         position: absolute;
     }
-
-    #finish{
-        background: url("testE.jpg");
+  #Comp{
+    	  width: 145px;
+        height: 20px;
+        left: 15px;
+        top: 100px;
+        position: absolute;
+    }
+  #Player{
+    		width: 145px;
+        height: 20px;
+        left: 15px;
+        top: 65px;
+        position: absolute;
+    }
+    #b100{
+        background: url("http://i.imgur.com/u3SmGeI.jpg");
         background-position : center;
     }
-
     #ew1{
         background: url("EndWorm.gif");
         background-position : center;
     }
-
     #sw1{
         background: url("StartWorm.gif");
         background-position : center;
     }
-
     #player1{
-        width: 0px;
-        height: 0px;
+        width: 50px;
+        height: 50px;
         position: absolute;
         left: 175px;
         top: 50px;
         top: 50px;
         background-color:WHITE;
         color: #4747D1;
-		background: url("Austronaut1.png");
+		background: url("http://i.imgur.com/Lni46No.png");
     }
-
     #player2{
         width: 0px;
         height: 0px;
@@ -94,17 +95,16 @@
     .tileTitleColor  tr td{
         color: floralwhite;
     }
-
 </style>
 
 <body id="bg">
 
 <table align="center" cellpadding="25" cellspacing="2" border ="1"  id="board" class=tileTitleColor>
     <tr>
-        <td  id="b100">Finish</td>
+        <td  id="b100">100</td>
         <td id="b99">99</td>
         <td id="b98">98</td>
-        <td id="b97">>97</td>
+        <td id="b97">97</td>
         <td id="b96">96</td>
         <td id="b95">95</td>
         <td id="b94">94</td>
@@ -232,13 +232,15 @@
 </table>
 
 <div id="dice" >
-    <img src="dice.gif" width="120" height="90" id="img"><h5 id="h5" align ="center">Dice Showing Number</h5></font>
+    <img width="120" height="90" id="img"><h5 id="h5" align ="center">Dice Showing Number</h5></font>
     <button id="Roll">ROLL!</button>
+	  <button id="Comp">Player vs Computer</button>
+  <button id="Player">Player vs Player</button>
     <div class="player1" id="player1">
-        <h2>ME</h2>
+        <h2>Player1</h2>
     </div>
     <div class="player2" id="player2">
-        <h2>COM</h2>
+        <h2>Player2</h2>
     </div>
 </div>
 
@@ -247,4 +249,3 @@
 
 
 </html>
-  
