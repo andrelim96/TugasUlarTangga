@@ -136,19 +136,22 @@ class Board{
     //print('#b'+(now.getPosition()+1).toString()); 
    if(next.getPosition()!=now.getPosition()&&now.getPosition()!=99)
     {
+     print((_tiles.elementAt(now.getPosition()) is Comet).toString());
+     print((_tiles.elementAt(now.getPosition()).isCometEnd()).toString());
+     print('#b'+(now.getPosition()+1).toString());
         if(_tiles.elementAt(now.getPosition()) is Comet)
         {
           querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/jo90VY4.gif')";
         }
-       if(_tiles.elementAt(now.getPosition()).isCometEnd() )
+       else if(_tiles.elementAt(now.getPosition()).isCometEnd() )
         {
           querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/RIBOFxo.gif')";
         }
-       if(_tiles.elementAt(now.getPosition()) is Wormhole)
+       else if(_tiles.elementAt(now.getPosition()) is Wormhole)
         {
           querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/eSaaclS.gif')";
         }
-       if(_tiles.elementAt(now.getPosition()).isWormholeEnd() )
+       else if(_tiles.elementAt(now.getPosition()).isWormholeEnd() )
         {
           querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/YGWtlBR.gif')";
         }
@@ -241,15 +244,15 @@ class Board{
         {
           querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/jo90VY4.gif')";
         }
-       if(_tiles.elementAt(now.getPosition()).isCometEnd() )
+       else if(_tiles.elementAt(now.getPosition()).isCometEnd() )
         {
           querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/RIBOFxo.gif')";
         }
-       if(_tiles.elementAt(now.getPosition()) is Wormhole)
+       else if(_tiles.elementAt(now.getPosition()) is Wormhole)
         {
           querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/eSaaclS.gif')";
         }
-       if(_tiles.elementAt(now.getPosition()).isWormholeEnd() )
+       else if(_tiles.elementAt(now.getPosition()).isWormholeEnd() )
         {
           querySelector('#b'+(now.getPosition()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/YGWtlBR.gif')";
         }
