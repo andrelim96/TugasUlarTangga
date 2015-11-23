@@ -80,7 +80,7 @@ class Board{
         querySelector('#b'+(x+1).toString()).style.backgroundImage = "url('http://i.imgur.com/jo90VY4.gif')";
          querySelector('#b'+(temp.getOutIndex()+1).toString()).style.backgroundImage = "url('http://i.imgur.com/RIBOFxo.gif')";
       }
-      
+      querySelector('#player1').style.color = "RED";
     }
   }
   /// Method untuk mendapatkan seluruh pemain [_players].
@@ -108,10 +108,14 @@ class Board{
     if(i==1) //0
     {
       next =_players.elementAt(0);
+    	querySelector('#player1').style.color = "RED";
+      querySelector('#player2').style.color = "#FFDA90";
     }
     else if(i==0)
     {
       next =_players.elementAt(1);
+      querySelector('#player2').style.color = "RED";
+      querySelector('#player1').style.color = "#0000ff";
     }
     int steps = this._dice.randomizer();
     if(steps == 1){
@@ -209,13 +213,17 @@ class Board{
     //print(i.toString());
     Player now = _players.elementAt(i);
     Player next = null;
-    if(i==1) //0
+        if(i==1) //0
     {
       next =_players.elementAt(0);
+    	querySelector('#player1').style.color = "RED";
+      querySelector('#player2').style.color = "#FFDA90";
     }
     else if(i==0)
     {
       next =_players.elementAt(1);
+      querySelector('#player2').style.color = "RED";
+      querySelector('#player1').style.color = "#0000ff";
     }
     int steps = this._dice.randomizer();
     if(steps == 1){
