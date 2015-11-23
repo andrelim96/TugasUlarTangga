@@ -13,15 +13,15 @@ Komet menggantikan fungsi tangga pada permainan ular tangga. Jika pemain berada 
   Astronot Kuning
 
 ![alt text] (http://i.imgur.com/jo90VY4.gif "Komet 1")
-  Komet 1
+  Awal Komet
 
 ![alt text] (http://i.imgur.com/RIBOFxo.gif "Komet 2")
-  Komet 2
+  Ujung Komet
 
 ![alt text] (http://i.imgur.com/0wRCrHu.gif "Wormhole 1")
-  Wormhole 1
+  Awal Wormhole
 
 ![alt text] (http://i.imgur.com/8Iw6nIH.gif "Wormhole 2")
-  Wormhole 2
+  Ujung Wormhole
 
 
