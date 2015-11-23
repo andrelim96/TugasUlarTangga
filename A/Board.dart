@@ -15,7 +15,7 @@ class Board{
   /// Atribut untuk merandom posisi [Obstacle] pada [Board].
   Random _obstacleRandomizer;
   /// Atribut yang menyimpan banyaknya [Obstacle] dalam [Board].
-  final num _NUM_OF_OBSTACLE = 5;
+  final num _NUM_OF_OBSTACLE = 10;
   /// Atribut yang menyimpan giliran [Player]
   int _giliranPemain=-1;
   ///Atribut yang menyimpan nilai boolean apakah board memiliki player computer
