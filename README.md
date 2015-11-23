@@ -7,9 +7,18 @@ Space Adventure adalah permainan ular tangga dengan tema luar angkasa. Cerita da
 Komet menggantikan fungsi tangga pada permainan ular tangga. Jika pemain berada di kotak yang memiliki komet, maka pemain tersebut akan bergerak langsung ke komet lain yang berada di kotak angka yang lebih besar. Wormhole menggantikan fungsi ular pada permainan ular tangga. Jika pemain berada di kotak yang memiliki wormhole, maka pemain tersebut akan bergerak langsung ke wormhole lain yang berada di kotak angka yang lebih kecil. 
 
 ![alt text] (http://i.imgur.com/Gap0zLJ.png "Astronot Biru")
-![alt text] (http://i.imgur.com/Gap0zLJ.png "Astronot Kuning")
-![alt text] (http://i.imgur.com/jo90VY4.gif "Komet")
+  Astronot Biru
+![alt text] (http://i.imgur.com/Hgfn8JV.png "Astronot Kuning")
+  Astronot Kuning
+
+![alt text] (http://i.imgur.com/jo90VY4.gif "Komet 1")
+  Komet 1
+![alt text] (http://i.imgur.com/RIBOFxo.gif "Komet 2")
+  Komet 2
+
 ![alt text] (http://i.imgur.com/0wRCrHu.gif "Wormhole 1")
+  Wormhole 1
 ![alt text] (http://i.imgur.com/8Iw6nIH.gif "Wormhole 2")
+  Wormhole 2
 
 
