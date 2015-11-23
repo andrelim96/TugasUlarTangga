@@ -18,6 +18,8 @@ class Board{
 
   /// Constructor kelas [Board] dengan parameter banyaknya pemain.
    Board(int numOfPlayers, bool withComp) {
+    querySelector('#Comp').style.cssText = 'display:none';
+     querySelector('#Player').style.cssText = 'display:none';
     this._playingWithComp = withComp;
     this._players = new List<Player>();
     for (int i = 0; i < numOfPlayers; i++) {
@@ -183,7 +185,7 @@ class Board{
 
   ///Method untuk memberi jeda antara giliran jalan player dan giliran jalan computer	
   Future sleep() {
-  return new Future.delayed(const Duration(seconds: 5), () => playWithComp());
+  return new Future.delayed(const Duration(seconds: 1), () => playWithComp());
 }
   /// Method yang merepresentasikan giliran main player komputer.
   void playWithComp() {
@@ -286,7 +288,11 @@ class Board{
 }
 	/// Method untuk menjalankan permainan.
 void main(){
-  	Board board = new Board(2,false);
+  Board board = null;
+  InputElement comp = querySelector('#Comp');
+    comp.onClick.listen((event) => board = new Board(2,true));
+  InputElement player = querySelector('#Player');
+    player.onClick.listen((event) => board = new Board(2,false));
     InputElement roll = querySelector('#Roll');
     roll.onClick.listen((event) => board.play());
 }
