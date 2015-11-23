@@ -1,3 +1,7 @@
+import 'dart:math';
+import 'dart:core';
+import 'dart:html';
+
 ///Kelas yang merepresentasikan sebuah petak dalam papan permainan ular tangga.
 class Tile{
   ///atribut yang menyimpan nilai boolean apakah pada petak terdapat pemain.
