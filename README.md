@@ -8,8 +8,8 @@ Komet menggantikan fungsi tangga pada permainan ular tangga. Jika pemain berada 
 
 ![alt text] (http://i.imgur.com/Gap0zLJ.png "Astronot Biru")
 ![alt text] (http://i.imgur.com/Gap0zLJ.png "Astronot Kuning")
-![alt text] (http://i.imgur.com/jo90VY4.gifv "Komet")
-![alt text] (http://i.imgur.com/0wRCrHu.gifv "Wormhole 1")
-![alt text] (http://i.imgur.com/8Iw6nIH.gifv "Wormhole 2")
+![alt text] (http://i.imgur.com/jo90VY4.gif "Komet")
+![alt text] (http://i.imgur.com/0wRCrHu.gif "Wormhole 1")
+![alt text] (http://i.imgur.com/8Iw6nIH.gif "Wormhole 2")
 
 
