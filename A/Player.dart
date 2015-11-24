@@ -37,7 +37,7 @@ class Player{
         this._position = x;
     }
 
-		/// Method yang memindahkan posisi [Player] jika sudah melewati papan permainan.
+		/// Method untuk membuat posisi [Player] mundur sebanyak parameter steps.
     void moveBackward(int steps) {
     		this._position-=steps;
         if(this._position<0){
