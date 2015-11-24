@@ -196,6 +196,7 @@ class Board{
 		if(now.getPosition()==99)
     {
       querySelector('#Roll').style.cssText = 'display:none';
+      querySelector('#player'+(i+1).toString()).text = "Winner";
     }
     if(this._playingWithComp){
 			sleep();
@@ -301,6 +302,7 @@ class Board{
 		if(now.getPosition()==99)
     {
       querySelector('#Roll').style.cssText = 'display:none';
+      querySelector('#player'+(i+1).toString()).text = "Winner";
     }
   }
   /// Method untuk menampilkan [Board] dalam text mode.
